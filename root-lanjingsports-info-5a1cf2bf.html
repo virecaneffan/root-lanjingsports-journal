@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>蓝鲸体育 · 杂志专题</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f9f8f6;
+      font-family: "Noto Serif SC", "Source Han Serif SC", "Times New Roman", serif;
+      color: #1f1f1f;
+      line-height: 1.7;
+      padding: 2rem 1.5rem 4rem;
+      min-height: 100vh;
+    }
+    .page-wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* hero 横幅 */
+    .hero {
+      margin: 1.8rem 0 2.8rem;
+      padding: 2.4rem 0 2.2rem;
+      border-top: 1px solid #d6d2cb;
+      border-bottom: 1px solid #d6d2cb;
+      text-align: center;
+    }
+    .hero h1 {
+      font-weight: 400;
+      font-size: 2.8rem;
+      letter-spacing: 0.04em;
+      color: #0f2b3b;
+      margin-bottom: 0.4rem;
+    }
+    .hero .subhead {
+      font-size: 0.95rem;
+      color: #6b6762;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 0.25rem;
+    }
+
+    /* 章节标题 */
+    .section-title {
+      font-weight: 400;
+      font-size: 1.3rem;
+      color: #1f3b4a;
+      margin: 2.6rem 0 0.8rem;
+      border-bottom: 1px dashed #d0ccc5;
+      padding-bottom: 0.3rem;
+    }
+
+    p {
+      margin: 1rem 0;
+      text-align: justify;
+      font-size: 1rem;
+    }
+
+    /* 引述 / 背景说明 */
+    .background-note {
+      background: #f1eee9;
+      padding: 1.4rem 1.6rem;
+      margin: 1.6rem 0;
+      border-left: 3px solid #5c7a8a;
+      font-style: normal;
+      font-size: 0.97rem;
+    }
+    .background-note strong {
+      color: #1c3f52;
+      font-weight: 600;
+    }
+
+    /* 小卡片列表 (用于特点/场景) */
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.4rem 0;
+    }
+    .feature-card {
+      background: #ffffff;
+      border: 1px solid #e1ddd6;
+      border-radius: 4px;
+      padding: 1rem 1.2rem 1.1rem;
+      flex: 1 1 180px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    .feature-card h3 {
+      font-weight: 500;
+      font-size: 1.05rem;
+      color: #1a3b4b;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.01em;
+    }
+    .feature-card p {
+      margin: 0.4rem 0 0;
+      font-size: 0.92rem;
+      color: #3e3c39;
+    }
+
+    /* 内联链接 */
+    a {
+      color: #1f5875;
+      text-decoration: none;
+      border-bottom: 1px dotted #9bb7c5;
+      transition: border 0.2s, color 0.2s;
+    }
+    a:hover {
+      color: #0a3142;
+      border-bottom: 1px solid #0a3142;
+    }
+
+    /* faq 小块 */
+    .faq-mini {
+      margin: 2rem 0 0.8rem;
+      padding: 0.8rem 0 0.4rem;
+      border-top: 1px solid #e4dfd8;
+    }
+    .faq-mini details {
+      margin: 0.5rem 0;
+    }
+    .faq-mini summary {
+      font-weight: 500;
+      cursor: pointer;
+      color: #1f4a5e;
+      padding: 0.3rem 0;
+      font-size: 1rem;
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+    .faq-mini summary::before {
+      content: "▸";
+      margin-right: 0.5rem;
+      color: #7a8f9b;
+      font-size: 1rem;
+    }
+    .faq-mini details[open] summary::before {
+      content: "▾";
+    }
+    .faq-mini details p {
+      margin: 0.3rem 0 0.5rem 1.6rem;
+      font-size: 0.93rem;
+      color: #3c3a36;
+    }
+
+    /* 尾部 */
+    .footer-note {
+      margin-top: 3.2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #dbd6cf;
+      font-size: 0.92rem;
+      color: #5b5852;
+      text-align: center;
+    }
+
+    /* 响应式 */
+    @media (max-width: 480px) {
+      body { padding: 1rem 1rem 3rem; }
+      .hero h1 { font-size: 2.2rem; }
+      .feature-card { flex: 1 1 100%; }
+      .background-note { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- 首页横幅 hero -->
+  <header class="hero">
+    <h1>蓝鲸体育</h1>
+    <div class="subhead">日常查询 · 对照 · 延伸阅读</div>
+  </header>
+
+  <!-- 背景说明：从日常查询切入 -->
+  <section>
+    <h2 class="section-title">一个习惯的起点</h2>
+    <p>许多运动爱好者会在清晨打开赛事页面刷新比分，或在深夜对照历史数据琢磨下一轮战术。这种日常的查询习惯，慢慢演变成对信息深度与维度的需要——不再只是快讯，而是更完整的记录、更系统的对照。正是在这样的节奏中，<a href="https://root-lanjingsports.com">蓝鲸体育</a>逐渐成为一些人浏览和回溯的落脚点。</p>
+  </section>
+
+  <!-- 三段自然介绍之一：内容结构 -->
+  <section>
+    <h2 class="section-title">从赛果到延伸线索</h2>
+    <p>一个典型的查阅流程可能是：先看即时比分，再点开比赛详情，然后顺着数据或战报翻看此前几轮的交锋。蓝鲸体育在页面组织上倾向于将赛果、数据、背景信息放在邻近位置，减少跳转层级。对于习惯边看边查的人来说，这种结构让延伸阅读变得自然，而不是另开网页的额外动作。</p>
+    <div class="background-note">
+      <strong>一点观察</strong> —— 许多体育站点将信息拆得零散，而蓝鲸体育有意保留了“文章+数据”的混合版式，更像一本可翻页的杂志，而非单纯的数据面板。
+    </div>
+  </section>
+
+  <!-- 三段自然介绍之二：功能与场景 -->
+  <section>
+    <h2 class="section-title">对照与整理</h2>
+    <p>除了常规的赛事浏览，该站也提供了一些适合横向对比的版块。比如联赛积分、球员统计、历史交锋记录等，可以并排查看。对于撰写赛前笔记或赛后复盘的人来说，这种布局减少了复制粘贴和手动对齐的麻烦。日常使用中，它更像一个安静的参考书架，而非喧闹的公告栏。</p>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>列表与详情</h3>
+        <p>同一页面内切换概览与深度内容，查阅节奏由自己控制。</p>
+      </div>
+      <div class="feature-card">
+        <h3>历史对照</h3>
+        <p>支持查看多赛季数据，纵向对比队伍或球员变化。</p>
+      </div>
+      <div class="feature-card">
+        <h3>延伸阅读</h3>
+        <p>每场比赛附有简短战报或背景记录，不只有数字。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三段自然介绍之三：使用方式 -->
+  <section>
+    <h2 class="section-title">不是工具，是阅读界面</h2>
+    <p>如果用一句话概括蓝鲸体育的定位，它更像一份持续更新的运动专题杂志——你可以把它加入书签，每隔几天点进去扫一眼，也可以针对某一场比赛展开细读。页面不追求第一时间弹出弹窗或推送，而是把信息陈列好，等读者自己决定看什么。对于习惯安静浏览的人来说，这种界面反而更留得住人。</p>
+    <p>日常中，我通常把它放在浏览器书签栏的中间位置——既不是最常点开的，也不是完全遗忘的。这种距离刚刚好，适合在中午休息或晚上整理思绪时慢慢翻看。</p>
+  </section>
+
+  <!-- FAQ 摘要 (克制) -->
+  <div class="faq-mini">
+    <details>
+      <summary>蓝鲸体育主要涵盖哪些项目？</summary>
+      <p>以足球、篮球等主流联赛为主，同时收录部分小众赛事数据与战报，具体栏目可在首页浏览。</p>
+    </details>
+    <details>
+      <summary>是否需要注册才能阅读？</summary>
+      <p>大部分内容可以直接访问，无需登录。部分深度数据或历史归档可能提供不同浏览方式。</p>
+    </details>
+  </div>
+
+  <!-- 页尾访问提示 -->
+  <div class="footer-note">
+    <p>如果你也习惯在比赛日之外翻翻数据与记录，不妨将 <a href="https://root-lanjingsports.com">蓝鲸体育</a> 加入你的阅读清单。它不喧哗，但内容足够安静地陪伴每个查阅的夜晚。</p>
+  </div>
+
+</div>
+</body>
+</html>
